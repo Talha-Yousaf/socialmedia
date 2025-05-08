@@ -8,7 +8,7 @@ if (!isset($_SESSION['username'])) {
 }
 
 // Database connection
-$conn = mysqli_connect("localhost", "root", "", "videos1");
+$conn = mysqli_connect("mysqlserver01.mysql.database.azure.com", "Sohaib786", "F=sL6B\"p9,a>p't", "socialdb");
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }

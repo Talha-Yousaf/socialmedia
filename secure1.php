@@ -47,7 +47,7 @@ if (isset($_POST['upload_video'])) {
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             // Insert video details into database
             $filename = basename($_FILES["fileToUpload"]["name"]);
-            $conn = mysqli_connect("localhost", "root", "", "videos");
+            $conn = mysqli_connect("mysqlserver01.mysql.database.azure.com", "Sohaib786", "F=sL6B\"p9,a>p't", "socialdb");
 
             // Check database connection
             if (!$conn) {
@@ -70,7 +70,7 @@ if (isset($_POST['upload_video'])) {
 // Delete selected videos
 if (isset($_POST['delete_videos'])) {
     if (!empty($_POST['videos'])) {
-        $conn = mysqli_connect("localhost", "root", "", "videos");
+        $conn = mysqli_connect("mysqlserver01.mysql.database.azure.com", "Sohaib786", "F=sL6B\"p9,a>p't", "socialdb");
 
         // Check database connection
         if (!$conn) {
@@ -125,7 +125,7 @@ if (isset($_POST['delete_videos'])) {
 }
 
 // Fetch uploaded videos from the database based on the selected option
-$conn = mysqli_connect("localhost", "root", "", "videos");
+$conn = mysqli_connect("mysqlserver01.mysql.database.azure.com", "Sohaib786", "F=sL6B\"p9,a>p't", "socialdb");
 $id = $_SESSION['id'];
 $view_option = isset($_GET['view-option']) ? $_GET['view-option'] : 'all';
 

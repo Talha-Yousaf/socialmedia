@@ -2,10 +2,10 @@
 
 //variables
 
-$hostname = "localhost";
-$username = "root";
-$password = "";
-$dbname = "videos";
+$hostname = "mysqlserver01.mysql.database.azure.com";
+$username = "Sohaib786";
+$password = "F=sL6B\"p9,a>p't";
+$dbname = "socialdb";
 
 //connection
 

@@ -46,7 +46,7 @@ if (isset($_POST['upload_video'])) {
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             // Insert video details into database
             $filename = basename($_FILES["fileToUpload"]["name"]);
-            $conn = mysqli_connect("localhost", "root", "", "videos");
+            $conn = mysqli_connect("mysqlserver01.mysql.database.azure.com", "Sohaib786", "F=sL6B\"p9,a>p't", "socialdb");
             $sql = "INSERT INTO videos (title, description, filename, uploader_id) VALUES ('$title', '$description', '$filename', $id)";
             if (mysqli_query($conn, $sql)) {
                 echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";

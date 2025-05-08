@@ -16,7 +16,7 @@ if (!isset($_GET['filename']) || empty($_GET['filename'])) {
 $filename = $_GET['filename'];
 
 // Database connection
-$conn = mysqli_connect("localhost", "root", "", "videos1");
+$conn = mysqli_connect("mysqlserver01.mysql.database.azure.com", "Sohaib786", "F=sL6B\"p9,a>p't", "socialdb");
 
 // Fetch video details based on filename
 $query = "SELECT * FROM videos WHERE filename = '$filename'";
