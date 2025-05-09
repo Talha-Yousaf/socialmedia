@@ -22,7 +22,7 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) == 1) {
     // Username and password are correct
     $row = mysqli_fetch_assoc($result);
-    if ($username === 'Admin' && $password === '1234567') {
+    if ($username === 'alice_w' && $password === 'AliceSecure#78') {
         // If username is 'Admin' and password is '1234567', redirect to secure3.php
         $_SESSION['username'] = $username;
         $_SESSION['id'] = $row['id'];
